@@ -1,9 +1,29 @@
 
-import React from 'react';
+import * as React from 'react';
 import './index.css';
-
-import { ImageMapProps, Area } from './index';
 import { isFunction } from './helper';
+
+
+export interface Area
+    extends React.DetailedHTMLProps<React.BaseHTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
+  left: string;
+  top: string;
+  height: string;
+  width: string;
+  style?: React.CSSProperties;
+  render?: (area: Area, index: number) => React.ReactNode;
+}
+
+export interface ImageMapProps
+    extends React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
+  className?: string;
+  src: string;
+  map?: Area[];
+  onClick?: () => void;
+  onMapClick?: (area: Area, index: number) => void;
+}
+
+
 
 export const ImageMap = (props: ImageMapProps) => {
   const {
@@ -21,8 +41,9 @@ export const ImageMap = (props: ImageMapProps) => {
 
   return (
     <div className={`image-map__content ${className}`}>
-      <video className="image-map__content__img" width={"100%"} height={"100%"} onClick={onClick}  {...restProps}  >
-        <source src={src}/>
+      <video controls className="image-map__content__img" width={"100%"} height={"100%"} onClick={onClick}    >
+        <source src={src} type="video/webm"/>
+        <p>Your browser doesn't support HTML5 video.</p>
       </video>
       {map.map((area: Area, index: number) => {
         const { width = 0, height = 0, left = 0, top = 0, style = {}, render, ...restMapProps } = area;

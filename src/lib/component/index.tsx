@@ -7,5 +7,4 @@
  */
 export { ImageMap } from './image-map/index';
 
-export type { Area } from './image-map/index';
 
