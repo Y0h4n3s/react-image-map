@@ -1,6 +1,9 @@
 {
+
 	"presets": [
-		"react-app"
+
+			"@babel/env",
+		"@babel/preset-react"
 	],
 	"plugins": [
 		["import", { "libraryName": "antd-mobile", "style": "css"}, "antd-mobile"]

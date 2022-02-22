@@ -31,7 +31,7 @@
 	"scripts": {
 		"start": "node scripts/start.js",
 		"test": "node scripts/test.js",
-		"build": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files",
+		"build": "GENERATE_SOURCEMAP=false node scripts/build.js",
 		"build:lib": "BUILD_ENV=prod sh scripts/build_lib.sh",
 		"dev:lib": "sh scripts/build_lib.sh",
 		"deploy": "sh scripts/deploy.sh",
@@ -40,16 +40,13 @@
 	},
 	"typings": "index.d.ts",
 	"dependencies": {
-		"@babel/polyfill": "^7.12.1",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"sass": "^1.49.8"
 	},
 	"devDependencies": {
 		"@ant-design/icons": "4.0.0",
-		"@babel/cli": "^7.17.6",
-		"@babel/core": "^7.17.5",
-		"@babel/preset-env": "^7.16.11",
+		"@babel/core": "7.4.3",
 		"@qiuz/react-image-map": "1.1.3",
 		"@svgr/webpack": "4.1.0",
 		"@types/node": "12.0.7",
@@ -100,7 +97,7 @@
 		"less": "^3.9.0",
 		"less-loader": "^5.0.0",
 		"mini-css-extract-plugin": "0.5.0",
-		"node-sass": "^6.0.1",
+		"node-sass": "^5.13.0",
 		"optimize-css-assets-webpack-plugin": "5.0.1",
 		"pnp-webpack-plugin": "1.2.1",
 		"postcss-flexbugs-fixes": "4.1.0",
