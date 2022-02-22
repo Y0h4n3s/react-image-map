@@ -27,7 +27,9 @@ export const ImageMap = (props: ImageMapProps) => {
 
   return (
     <div className={`image-map__content ${className}`}>
-      <img className="image-map__content__img" src={src} onClick={onClick} alt="" {...restProps} />
+      <video className="image-map__content__img" width={"100%"} height={"100%"} onClick={onClick}  {...restProps}  >
+        <source src={src}/>
+      </video>
       {map.map((area: Area, index: number) => {
         const { width = 0, height = 0, left = 0, top = 0, style = {}, render, ...restMapProps } = area;
         return (

@@ -1,8 +1,8 @@
 {
-	"name": "@qiuz/react-image-map",
+	"name": "react-video-map",
 	"version": "1.1.3",
 	"homepage": "http://blog.qiuz.site/react-image-map",
-	"description": "A percent react image map compnent - ",
+	"description": "A percent react video map compnent - ",
 	"license": "MIT",
 	"keywords": [
 		"react-iamge-map",
