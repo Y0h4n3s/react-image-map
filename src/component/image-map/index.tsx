@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import './index.scss';
+import './index.css';
 
 import { ImageMapProps, Area } from './index.d';
 import { isFunction } from './helper';

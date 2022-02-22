@@ -14,7 +14,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { useState, useEffect } from 'react';
 import { Button, message } from 'antd';
 import { QuestionOutlined } from '@ant-design/icons';
-import { ImageMap, Area } from 'react-image-map';
+import { ImageMap, Area } from '../../component/index';
 
 import EXAMPLE from './images/example.png';
 import { getGlobalData, getUrlParams } from 'common';
