@@ -1,6 +1,5 @@
 
 import * as React from 'react';
-import './index.css';
 import { isFunction } from './helper';
 
 
