@@ -1,4 +1,4 @@
 
-export const isFunction = (value: any) => {
+export const isFunction = (value) => {
 	return typeof value === 'function';
 };

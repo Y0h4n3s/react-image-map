@@ -18,6 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "sourceMap": true,
     "jsx": "preserve",
 		"experimentalDecorators": true,
 		"paths": {
@@ -27,10 +28,6 @@
     }
   },
   "include": [
-		"src"
+    "src/lib/*"
 	],
-	"exclude": [
-		"config",
-		"**__test__**"
-	]
 }

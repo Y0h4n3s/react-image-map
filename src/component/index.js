@@ -1,4 +1,4 @@
-
-export * from './VideoMap/VideoMap';
+import './index.css'
+export * from './VideoMap/index.js';
 
 
